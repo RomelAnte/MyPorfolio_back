@@ -1,0 +1,21 @@
+{
+  "name": "myporfolio_back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RomelAnte/MyPorfolio_back.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/RomelAnte/MyPorfolio_back/issues"
+  },
+  "homepage": "https://github.com/RomelAnte/MyPorfolio_back#readme"
+}
