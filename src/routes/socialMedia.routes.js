@@ -7,3 +7,5 @@ router.post('/', socialMediaController.insertSocialMedia);
 router.get('/:id', socialMediaController.getSocialMediaById);
 router.patch('/:id', socialMediaController.updateSocialMedia);
 router.delete('/:id', socialMediaController.deleteSocialMedia);
+
+module.exports = router;
