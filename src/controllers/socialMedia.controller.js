@@ -68,9 +68,27 @@ const deleteSocialMedia = async (req, res) => {
     }
 };
 
+const getSocialMediaById = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const socialMedia = await SocialMedia.query().findById(id);
+
+        if (!socialMedia) {
+            return res.status(404).json({ error: 'Social media not found' });
+        }
+
+        res.json(socialMedia);
+    }
+    catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Failed to fetch social media' });
+    }
+};
+
 module.exports = {
     listSocialMedias,
     insertSocialMedia,
     updateSocialMedia,
-    deleteSocialMedia
+    deleteSocialMedia,
+    getSocialMediaById
 };
