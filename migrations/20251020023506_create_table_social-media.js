@@ -6,7 +6,7 @@ exports.up = function(knex) {
     return knex.schema.createTable('social-media', function(table) {
         table.increments('id').primary();
         table.integer('user_id').unsigned().notNullable().references('id').inTable('user').onDelete('CASCADE');
-        table.string('platform').notNullable();
+        table.string('platform', 50).notNullable();
         table.string('url').notNullable().unique();
         table.timestamps(true, true);
     });

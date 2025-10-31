@@ -17,7 +17,10 @@ const insertHability = async (req, res) => {
         const newHability = await Hability.query().insert({
             user_id,
             name,
-            percentage
+            ico,
+            percentage,
+            experience_years,
+            description
         });
         
         res.status(201).json(newHability);

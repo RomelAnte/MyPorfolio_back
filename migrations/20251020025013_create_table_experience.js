@@ -6,8 +6,8 @@ exports.up = function(knex) {
     return knex.schema.createTable('experience', function(table) {
         table.increments('id').primary();
         table.integer('user_id').unsigned().notNullable().references('id').inTable('user').onDelete('CASCADE');
-        table.string('company').notNullable();
-        table.string('position').notNullable();
+        table.string('company', 100).notNullable();
+        table.string('position', 100).notNullable();
         table.date('start_date').notNullable();
         table.date('end_date').nullable();
         table.text('responsibilities').notNullable();
