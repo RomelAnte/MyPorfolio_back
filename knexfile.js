@@ -6,7 +6,7 @@
 module.exports = {
 
   development: {
-    client: 'pgsql',
+    client: 'postgresql',
     connection: {
       database: 'my_portfolio',
       user:     'postgres',
